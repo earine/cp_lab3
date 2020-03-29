@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h3 class="title">Tetris</h3>
+    <div class="game">
+        <canvas id="nextFigureView" width="140" height="120"></canvas>
+        <canvas id="boardView" width="300" height="600"></canvas>
+        <div class="stats">
+            <div id="playerName" class="stats-text">Player's name: Name</div>
+            <div id="score" class="stats-text">Score: 0</div>
+            <div class="controls">
+                <p>Press ← to move left</p>
+                <p>Press → to move right</p>
+                <p>Press ↓ to move down</p>
+                <p>Press ↑ to rotate</p>
+            </div>
+        </div>
+    </div>
+    <div id="gameOverDialog">
+        <div class="modal-content">
+            <p>Game Over</p>
+            <button type="button" onclick="openScores()">Scores</button>
+        </div>
+    </div>
+    <script>
+        function openScores() {
+            window.location.href = "scores.html";
+        }
+    </script>
+    <script type="text/javascript" src="tetris.js"></script>
+</body>
+</html>
